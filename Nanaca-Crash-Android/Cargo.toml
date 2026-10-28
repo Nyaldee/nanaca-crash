@@ -1,0 +1,24 @@
+[package]
+name = "nanaca-crash-android"
+version = "1.2.0"
+edition = "2024"
+description = "Unofficial PC port of NANACA†CRASH!! Android 1.2.0"
+license = "GPL-3.0-only"
+
+[[bin]]
+name = "nanaca_crash_android"
+path = "src/main.rs"
+
+[dependencies]
+# Fenêtre, souris, OpenGL.
+miniquad = "0.4"
+# Sortie du son, sur un fil prioritaire.
+cpal = { version = "0.18", features = ["realtime"] }
+# Musiques et sons OGG Vorbis de l'APK.
+symphonia = { version = "0.6", default-features = false, features = ["ogg", "vorbis"] }
+# Deflate : les fichiers compressés de l'APK.
+miniz_oxide = "0.9"
+# Images PNG et JPEG de l'APK.
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+# Textes en police système (CCLabelTTF), dessinés avec les polices fournies.
+fontdue = "0.9"

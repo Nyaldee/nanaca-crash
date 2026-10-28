@@ -1,0 +1,22 @@
+[package]
+name = "nanaca-crash-flash"
+version = "1.10.0"
+edition = "2024"
+description = "Unofficial PC port of NANACA†CRASH!! Flash 1.10"
+license = "GPL-3.0-only"
+
+[[bin]]
+name = "nanaca_crash_flash"
+path = "src/main.rs"
+
+[dependencies]
+# Fenêtre, souris, OpenGL.
+miniquad = "0.4"
+# Sortie du son, sur un fil prioritaire.
+cpal = { version = "0.18", features = ["realtime"] }
+# Sons MP3 du SWF.
+symphonia = { version = "0.6", default-features = false, features = ["mp3"] }
+# zlib : le SWF compressé et la transparence de ses images.
+miniz_oxide = "0.9"
+# Images JPEG du SWF.
+image = { version = "0.25", default-features = false, features = ["jpeg"] }

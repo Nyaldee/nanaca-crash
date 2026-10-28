@@ -1,0 +1,4 @@
+# cmd lit mal les .bat aux fins de ligne Unix : toujours CRLF.
+*.bat text eol=crlf
+# bash refuse les fins de ligne Windows : toujours LF.
+*.sh text eol=lf

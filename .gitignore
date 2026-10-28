@@ -1,0 +1,16 @@
+# Build output
+/target/
+
+# Original game files: copyrighted, never committed
+*.swf
+*.apk
+
+# Python caches of the tools
+__pycache__/
+
+# Anything extracted or decompiled from the originals
+/Tools/work/
+**/decompiled/
+**/extracted/
+
+RELEASE_NOTES.md
