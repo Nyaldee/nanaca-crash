@@ -1,0 +1,19 @@
+[workspace]
+members = ["Nanaca-Crash-Flash", "Nanaca-Crash-Android"]
+resolver = "3"
+
+# En debug : le jeu un peu optimisé (il reste débogable), ses dépendances
+# tout à fait (décodage des images et des sons).
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+# En release : le plus petit et le plus rapide possible.
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
